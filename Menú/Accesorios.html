@@ -13,7 +13,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- fin de enlace Boostrap-->
     <link rel="stylesheet" href="../normalize.css">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../scss/styles.css">
 
     <title>Accesorios</title>
 </head>
@@ -47,6 +47,9 @@
             </div>
         </nav>
     </header>
+    <!-- ==============================================================================
+    =======================/barrra de navegacion/======================================
+    =============================================================================== -->
 
     <main id="post">
 
@@ -54,83 +57,193 @@
 
         <h2>Elija su vehiculo</h2>
 
+        <!-- ==============================================================================
+        =======================/enlaces/======================================
+        =============================================================================== -->
         <section>
-            <ul>
-                <li class="list "><a href="../Menú/Accesorios.html/auto"><img src="../multimedia/icons/Auot logo.png"
-                            height="300px" width="300"></a></li>
-                <li class="list"><a href="../Menú/Accesorios.html/moto"><img src="../multimedia/icons/moto logo.png"
-                            height="300px" width="300"></a></li>
-            </ul>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <a href="./autos.html"><img src="../multimedia/icons/Auot logo.png" alt="" height="400px"
+                                width="400px" class="itemV imagefix"></a>
+                    </div>
+                    <div class="col">
+                        <a href="./motos.html"><img src="../multimedia/icons/moto logo.png" alt="" height="400px"
+                                width="400px" class="itemV imagefix"></a>
+                    </div>
+                </div>
+            </div>
         </section>
+        <!-- ==============================================================================
+        =======================/enlaces/======================================
+        =============================================================================== -->
 
-        <article>
-            <div>
-                <ul class="fondo">
-                    <li class="itema"><img src="../multimedia/imagenes/akrapovick.jpg" height="150px" width="150px"
-                            alt="escape"></li>
-                    <p><strong>Silenciador Akrapovic $4000</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/aleron1.jpg" height="150px" width="150px"
-                            alt="aleron"></li>
-                    <p><strong>Aleron universal para autos $12.000</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/bbs rueda.jfif" height="150px" width="150px"
-                            alt="rueda bbs"></li>
-                    <p><strong>Rueda de 18 pulgadas BBS $50.000</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/brembo1.jpg" height="150px" width="150px"
-                            alt="brembo1"></li>
-                    <p><strong>Conjunto caliper y disco de freno brembo $20.000</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/escapes.jpg" height="150px" width="150px"
-                            alt="escapes"></li>
-                    <p><strong>Escape de doble salida $7.000</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/faromoto.jpg" height="150px" width="150px"
-                            alt="faro1"></li>
-                    <p><strong>Faro rouser ns 200 $2500</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/ledaux.png" height="150px" width="150px"
-                            alt="auxiliares"></li>
-                    <p><strong>Faros auxuliares universales moto $3.125</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/brembo3.jpg" height="150px" width="150px"
-                            alt="brembo3"></li>
-                    <p><strong>Caliper de freno brembo $5.000</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/faro auto2.jpg" height="150px" width="150px"
-                            alt="faro1"></li>
-                    <p><strong>Faro delantero derecho chevrolet aveo $10.000</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/rueda1.jpg" height="150px" width="150px"
-                            alt="rueda1"></li>
-                    <p><strong>Rueda de 20 pulgadas BBS $60.000</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/yoshimura.jpg" height="150px" width="150px"
-                            alt="yoshimura"></li>
-                    <p><strong>Escape universal yoshimura para motos 250cc $4.500</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/faroauto1.jpg" height="150px" width="150px"
-                            alt="faro2"></li>
-                    <p><strong>Faro delantero izquierdo dodge RAM 1500 $4.780</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/faromoto2.jpg" height="150px" width="150px"
-                            alt="faromoto1"></li>
-                    <p><strong>Faro universal para moto $3.200</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/faroauto2.jpg" height="150px" width="150px"
-                            alt="faro4"></li>
-                    <p><strong>Faro delantero izquierdo Nissan 350Z $6.200</strong></p>
-
-                    <li class="itema"><img src="../multimedia/imagenes/disco_e_pinza_moto_brembo.jpg" height="150px"
-                            width="150px" alt="brembo3"></li>
-                    <p><strong>Pinza y disco de freno brembo XXL $9.000</strong></p>
-                </ul>
+        <!-- ==============================================================================
+        =======================/productos/======================================
+        =============================================================================== -->
+        <article class="mt-5 mb-5">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                        aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                        aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                        aria-label="Slide 6"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6"
+                        aria-label="Slide 7"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7"
+                        aria-label="Slide 8"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8"
+                        aria-label="Slide 9"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9"
+                        aria-label="Slide 10"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10"
+                        aria-label="Slide 11"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11"
+                        aria-label="Slide 12"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12"
+                        aria-label="Slide 13"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="13"
+                        aria-label="Slide 14"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="14"
+                        aria-label="Slide 15"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../multimedia/imagenes/akrapovick.jpg" height="600px" class="d-block w-100  imagefix"
+                            alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Silenciador Akrapovic</h5>
+                            <p>$4000</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/aleron1.jpg" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Aleron universal</h5>
+                            <p>$12.000</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/bbs rueda.jfif" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Rueda de 18 pulgadas BBS</h5>
+                            <p>$50.000</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/brembo1.jpg" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Conjunto caliper y disco de freno brembo</h5>
+                            <p>$20.000</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/escapes.jpg" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Escape de doble salida</h5>
+                            <p>$7.000</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/faromoto.jpg" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Faro rouser ns 200</h5>
+                            <p>$2500</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/ledaux.png" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Faros auxuliares universales moto</h5>
+                            <p>$3.125</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/brembo3.jpg" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Caliper de freno brembo</h5>
+                            <p>$5.000</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/faro auto2.jpg" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Faro delantero derecho chevrolet aveo</h5>
+                            <p>$10.000</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/rueda1.jpg" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Rueda de 20 pulgadas BBS</h5>
+                            <p>$60.000</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/yoshimura.jpg" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Escape universal yoshimura para motos 250cc</h5>
+                            <p>$4.500</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/faroauto1.jpg" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Faro delantero izquierdo dodge RAM 1500</h5>
+                            <p>$4.780</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/faromoto2.jpg" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Faro universal para moto</h5>
+                            <p>$3.200</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/faroauto2.jpg" height="600px" class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Faro delantero izquierdo Nissan 350Z</h5>
+                            <p>$6.200</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../multimedia/imagenes/disco_e_pinza_moto_brembo.jpg" height="600px"
+                            class="d-block w-100 imagefix" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Pinza y disco de freno brembo XXL</h5>
+                            <p>$9.000</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
         </article>
-
+        <!-- ==============================================================================
+        =======================/prodctos/======================================
+        =============================================================================== -->
     </main>
 
+    <!-- ==============================================================================
+    =======================/pie de página/======================================
+    =============================================================================== -->
     <footer>
         <nav class="enlaces">
             <ul>
@@ -149,16 +262,31 @@
         <p class="Copyright"><i class="fa-regular fa-copyright"></i> <strong>Copyright 2023 - Mecánica Max power page.
                 Todos los derechos reservados.</strong> </p>
     </footer>
+    <!-- ==============================================================================
+    =======================/pie de página/======================================
+    =============================================================================== -->
 
+    <!-- ==============================================================================
+    =======================/boton de subir/======================================
+    =============================================================================== -->
     <div class="up">
         <a href="#"><i class="fa-solid fa-chevron-up"></i></a>
     </div>
+    <!-- ==============================================================================
+    =======================/boton de subir/======================================
+    =============================================================================== -->
 
+    <!-- ==============================================================================
+    =======================/scripts/======================================
+    =============================================================================== -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+    <!-- ==============================================================================
+    =======================/scripts/======================================
+    =============================================================================== -->
 </body>
 </html>
