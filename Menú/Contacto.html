@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +17,7 @@
     <link rel="stylesheet" href="../scss/styles.css">
     <title>Contacto</title>
 </head>
+
 <body>
     <!-- ==============================================================================
     =======================/barrra de navegacion/======================================
@@ -57,7 +59,7 @@
         =============================================================================== -->
         <h1>Contacto</h1>
         <div>
-            <p class="parraf fs-3">
+            <p class="parraf fs-2">
                 Si te quedó alguna duda acerca de nuestro trabajo o simplemente querés comunicarte con nosotros,
                 te pedimos por favor que completes el siguiene formulario. Tu opinion nos ayuda a mejorar.
             </p>
@@ -69,46 +71,49 @@
         <!-- ==============================================================================
         =======================/formulario/======================================
         =============================================================================== -->
-        <div class="contact">
+        <div class="text-center">
+            <div class="contact">
 
-            <form action="enviar.php" method="post" enctype="text/plain">
+                <form action="enviar.php" method="post" enctype="text/plain">
 
-                <div class="esp">
-                    <label for="nombre">Nombre</label><br>
-                    <input type="text" id="nombre" name="nombre" placeholder="ingresa tu nombre" required>
-                </div>
-                <div class="esp">
-                    <label for="Apellido">Apellido</label><br>
-                    <input type="text" id="apellido" name="apellido" placeholder="ingresa tu apellido" required>
-                </div>
-                <div class="esp">
-                    <label for="edad">Edad</label><br>
-                    <input type="number" id="edad" name="edad" placeholder="ingresa tu edad" required>
-                </div>
-                <div class="esp">
-                    <label for="email">Email</label><br>
-                    <input type="email" id="email" name="email" placeholder="ingresa tu email" required>
-                </div>
-                <div class="esp">
-                    <label for="telefono">Teléfono</label><br>
-                    <input type="number" id="telefono" name="telefono" placeholder="ingresa tu número" required>
-                </div>
-                <div class="esp">
-                    <label for="fecha">Fecha</label><br>
-                    <input type="date" name="fecha" id="fecha">
-                </div>
-                <div class="esp">
-                    <label for="comentarios">Comentarios</label><br>
-                    <textarea name="comentarios" id="comentarios" cols="25" rows="5"
-                        placeholder="escribe tu comentario"></textarea>
-                </div>
-                <div class="esp">
-                    <input type="submit">
-                </div>
+                    <div class="esp">
+                        <label for="nombre">Nombre</label><br>
+                        <input type="text" id="nombre" name="nombre" placeholder="ingresa tu nombre" required>
+                    </div>
+                    <div class="esp">
+                        <label for="Apellido">Apellido</label><br>
+                        <input type="text" id="apellido" name="apellido" placeholder="ingresa tu apellido" required>
+                    </div>
+                    <div class="esp">
+                        <label for="edad">Edad</label><br>
+                        <input type="number" id="edad" name="edad" placeholder="ingresa tu edad" required>
+                    </div>
+                    <div class="esp">
+                        <label for="email">Email</label><br>
+                        <input type="email" id="email" name="email" placeholder="ingresa tu email" required>
+                    </div>
+                    <div class="esp">
+                        <label for="telefono">Teléfono</label><br>
+                        <input type="number" id="telefono" name="telefono" placeholder="ingresa tu número" required>
+                    </div>
+                    <div class="esp">
+                        <label for="fecha">Fecha</label><br>
+                        <input type="date" name="fecha" id="fecha">
+                    </div>
+                    <div class="esp">
+                        <label for="comentarios">Comentarios</label><br>
+                        <textarea name="comentarios" id="comentarios" cols="25" rows="5"
+                            placeholder="escribe tu comentario"></textarea>
+                    </div>
+                    <div class="esp">
+                        <input type="submit">
+                    </div>
 
 
-            </form>
+                </form>
+            </div>
         </div>
+
         <!-- ==============================================================================
         =======================/formulario/======================================
         =============================================================================== -->
@@ -162,4 +167,5 @@
     =======================/scripts/======================================
     =============================================================================== -->
 </body>
+
 </html>

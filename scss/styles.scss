@@ -113,7 +113,7 @@ main {
 }
 
 .portada {
-    padding: 10px;
+    margin: 10px;
 }
 
 .parraf {
@@ -132,7 +132,7 @@ main {
 }
 
 .imagefix {
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .nright {
@@ -182,6 +182,8 @@ main {
 
 .contact {
     background-color: $greydark;
+    width: 100%;
+    height: auto;
 
     .esp {
         text-align: left;
@@ -256,7 +258,7 @@ footer {
     position: fixed;
     right: 40px;
     bottom: 150px;
-    background-color: black;
+    background-color: $darktrasparent;
     padding: 10px;
     box-shadow: 0 0 5px white, 0 0 5px white;
     color: $bluemidnight;
@@ -340,10 +342,10 @@ footer {
 
     .contact {
         display: inline-block;
-        width: 70%;
+        width: 100%;
         height: auto;
         margin: 50px 0 50px 0;
-        background-color: rgb(134, 134, 134);
+        background-color: $greydark;
     }
 
     .parraf {
@@ -419,16 +421,14 @@ footer {
         background-position: center;
         width: 80%;
         height: auto;
-        margin-bottom: 50px;
-        display: inline-block;
+        .esp {
+            text-align: left;
+            padding-top: 20px;
+            padding-left: 40px;
+            padding-bottom: 10px;
+        }
     }
 
-    .esp {
-        text-align: left;
-        padding-top: 20px;
-        padding-left: 40px;
-        padding-bottom: 10px;
-    }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -458,4 +458,5 @@ footer {
             background-image: url(../multimedia/imagenes/gif#{$i}.gif);
         }
     }
+
 }
