@@ -1,24 +1,32 @@
 @font-face {
     font-family: vampire;
-    src: url(fonts/Vampire\ Wars.otf);
+    src: url(../fonts/Vampire\ Wars.otf);
 }
 
 @font-face {
     font-family: greating;
-    src: url(fonts/Greating.otf);
+    src: url(../fonts/Greating.otf);
 }
 
 // colors
 $bluemidnight: rgb(3, 3, 61);
-$darktrasparent: rgba(0, 0, 0, 0.600);
+$darktrasparent: rgba(0, 82, 97, 0.9);
 $greydark: rgb(134, 134, 134);
-$greenaqua: rgb(58, 238, 169);
+$darkorange: rgb(255, 72, 0);
 
 // fonts
 $mayusc: vampire;
 $cursive: greating;
 $minuscule: monospace;
 $normal: verdana;
+
+// sizes
+$maxwidth: 100%;
+$medwidht: 50%;
+$minwidth: 25%;
+$maxpixels: 100px;
+$medpixels: 50px;
+$minpixels: 25px;
 
 * {
     margin: 0;
@@ -28,45 +36,35 @@ $normal: verdana;
 
 h1 {
     background-color: $bluemidnight;
-    height: auto;
     text-align: center;
     font-family: $mayusc;
-    font-size: 45px;
+    font-size: calc($medpixels - 5px);
     font-style: italic;
     color: aliceblue;
     padding: 20px 0 20px 0;
 }
 
 h2 {
-    text-align: center;
-    font-family: $cursive;
-    font-size: 27px;
-    color: aliceblue;
-    background-color: $bluemidnight;
-    width: auto;
-    height: auto;
-    margin: 100px 0 100px 0;
-    padding: 20px;
+    @extend h1;
+    font-family: $cursive !important;
+    font-style: normal !important;
+    font-size: calc($minpixels + 5px) !important;
+    padding: 20px !important;
 }
 
 h3 {
-    text-align: center;
-    font-family: $cursive;
-    font-size: 30px;
-    color: aliceblue;
-    background-color: $bluemidnight;
-    width: auto;
-    height: auto;
-    padding: 15px;
-    margin-top: 20px;
+    @extend h2;
+    margin-top: 20px !important;
+    margin-bottom: 10px !important;
+    width: $maxwidth !important;
 }
 
-h5 {
-    font-size: 40px;
+h4 {
+    font-size: $minpixels + 10px;
 }
 
 body {
-    background-image: url(../multimedia/imagenes/pxfuel.jpg);
+    background-image: url(../multimedia/imagenes/engranajes.jpg);
     background-size: contain;
 }
 
@@ -74,7 +72,8 @@ body {
     background-color: black;
 
     .navbar-toggler {
-        border: 3px solid darkcyan !important;
+        border: none;
+        font-size: calc($minpixels + 10px);
 
         i {
             color: aliceblue;
@@ -89,7 +88,7 @@ body {
         border-radius: 10px;
         margin-left: 10px;
         font-family: greating;
-        font-size: 20px;
+        font-size: $minpixels;
         margin-right: 10px;
 
         .nav-link {
@@ -104,7 +103,7 @@ body {
 
 main {
     background-color: $darktrasparent;
-    width: 80%;
+    width: calc($maxwidth - 20%);
     height: auto;
     margin: auto;
     border: 8px;
@@ -120,8 +119,7 @@ main {
     text-align: justify;
     font-family: $cursive;
     color: lightgoldenrodyellow;
-    word-spacing: 20px;
-    font-size: 45px;
+    word-spacing: 15px;
     padding: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -145,7 +143,7 @@ main {
 }
 
 .galerie {
-    width: 100%;
+    width: $maxwidth;
     height: auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -156,13 +154,13 @@ main {
 }
 
 .item {
-    border: 2px solid rgb(58, 238, 169);
+    border: 2px solid $darkorange;
     border-radius: 30px;
     background-size: cover;
     background-position: center;
 
     &:hover {
-        transform: scale(1.8);
+        transform: scale(1.9);
         transition: all 1.1s;
         border-style: dashed;
     }
@@ -182,13 +180,13 @@ main {
 
 .contact {
     background-color: $greydark;
-    width: 100%;
+    width: $maxwidth;
     height: auto;
 
     .esp {
         text-align: left;
         color: darkblue;
-        font-size: 20px;
+        font-size: calc($minpixels - 5px);
         padding-top: 20px;
         padding-left: 40px;
         padding-bottom: 10px;
@@ -198,26 +196,26 @@ main {
 .prof {
     background-color: bisque;
     height: auto;
-    width: 95%;
+    width: calc($maxwidth - 5%);
 }
 
 .itemV {
-    background-color: $greenaqua;
+    background-color: $darkorange;
     padding: 20px;
     margin: 50px 0 50px 0;
-    width: 100%;
+    width: $maxwidth;
     height: auto;
 }
 
 .carousel-caption {
-    color: orangered;
-    font-size: 40px;
+    color: $darkorange;
+    font-size: calc($medpixels - 10px);
     font-family: fantasy;
 }
 
 footer {
     background-color: $greydark;
-    width: 100%;
+    width: $maxwidth;
     height: auto;
     display: inline-block;
 }
@@ -242,7 +240,7 @@ footer {
 .redes {
     text-align: right;
     color: $bluemidnight;
-    font-size: 35px;
+    font-size: calc($minpixels + 10px);
     letter-spacing: 20px;
     padding: 0 15px 15px 0;
 }
@@ -250,7 +248,7 @@ footer {
 .Copyright {
     font-family: $minuscule;
     font-style: italic;
-    font-size: 20px;
+    font-size: calc($minpixels - 5px);
     padding: 0 0 10px 60px;
 }
 
@@ -261,8 +259,11 @@ footer {
     background-color: $darktrasparent;
     padding: 10px;
     box-shadow: 0 0 5px white, 0 0 5px white;
-    color: $bluemidnight;
     border-radius: 5px;
+
+    i {
+        color: aliceblue;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -277,7 +278,7 @@ footer {
 @media only screen and (min-width: 320px) {
 
     main {
-        width: 100%;
+        width: $maxwidth;
         height: auto;
     }
 
@@ -291,12 +292,12 @@ footer {
 
     .parraf {
         padding: 0;
-        font-size: 25px;
+        font-size: $minpixels;
         text-align: center;
     }
 
     .contact {
-        width: 100%;
+        width: $maxwidth;
         height: auto;
         margin: 50px 0 50px 0;
         background-image: none;
@@ -313,15 +314,15 @@ footer {
 
     .carousel-caption {
         display: inline-block !important;
-        font-size: 20px;
+        font-size: calc($minpixels - 5px);
     }
 
     h5 {
-        font-size: 15px;
+        font-size: $minpixels;
     }
 
     .parraf p {
-        font-size: 25px;
+        font-size: $minpixels;
         text-align: justify;
     }
 
@@ -335,14 +336,14 @@ footer {
     }
 
     main {
-        background-color: rgba(0, 0, 0, 0.600);
-        width: 100%;
+        background-color: $darktrasparent;
+        width: $maxwidth;
         height: auto;
     }
 
     .contact {
         display: inline-block;
-        width: 100%;
+        width: $maxwidth;
         height: auto;
         margin: 50px 0 50px 0;
         background-color: $greydark;
@@ -350,17 +351,13 @@ footer {
 
     .parraf {
         padding: 0;
-        font-size: 40px;
+        font-size: calc($medpixels - 10px);
         text-align: center;
     }
 
     .carousel-caption {
         display: inline-block !important;
-        font-size: 30px;
-    }
-
-    h5 {
-        font-size: 25px;
+        font-size: calc($minpixels + 5px);
     }
 
     .galerie {
@@ -389,12 +386,12 @@ footer {
 @media only screen and (min-width: 992px) {
 
     main {
-        width: 80%;
+        width: calc($maxwidth - 20%);
         height: auto;
     }
 
     .galerie {
-        width: 100%;
+        width: $maxwidth;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(6, 200px);
     }
@@ -415,12 +412,21 @@ footer {
         }
     }
 
+    .parraf {
+        p {
+            img {
+                width: calc($minwidth + 5%);
+            }
+        }
+    }
+
     .contact {
         background-image: url(../multimedia/imagenes/operadora.jpg);
         background-size: cover;
         background-position: center;
-        width: 80%;
+        width: calc($maxwidth - 20%);
         height: auto;
+
         .esp {
             text-align: left;
             padding-top: 20px;
@@ -436,10 +442,10 @@ footer {
     h2 {
         text-align: center;
         font-family: greating;
-        font-size: 27px;
+        font-size: calc($minpixels + 5px);
         color: aliceblue;
-        background-color: rgb(3, 3, 61);
-        width: 30%;
+        background-color: $bluemidnight;
+        width: calc($minwidth + 5%);
         height: 80px;
         margin-top: 100px;
         margin-bottom: 50px;
