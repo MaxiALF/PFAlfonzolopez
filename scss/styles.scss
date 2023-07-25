@@ -60,7 +60,8 @@ h3 {
 }
 
 h4 {
-    font-size: $minpixels + 10px;
+    font-size: $minpixels;
+    color: $darkorange !important;
 }
 
 body {
@@ -160,8 +161,8 @@ main {
     background-position: center;
 
     &:hover {
-        transform: scale(1.9);
-        transition: all 1.1s;
+        transform: scale(1.5);
+        transition: all 1.2s;
         border-style: dashed;
     }
 }
@@ -207,10 +208,17 @@ main {
     height: auto;
 }
 
-.carousel-caption {
-    color: $darkorange;
-    font-size: calc($medpixels - 10px);
-    font-family: fantasy;
+.card {
+    background-color: $bluemidnight !important;
+
+    .card-body {
+        background-color: $greydark;
+
+        p {
+            font-size: calc($minpixels + 5px) !important;
+            color: goldenrod !important;
+        }
+    }
 }
 
 footer {
@@ -286,6 +294,19 @@ footer {
         display: none;
     }
 
+    .item {
+        border: 2px solid $darkorange;
+        border-radius: 30px;
+        background-size: cover;
+        background-position: center;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: all 1.2s;
+            border-style: dashed;
+        }
+    }
+
     .videos {
         display: inline-block;
     }
@@ -312,27 +333,29 @@ footer {
         margin: 5px 0 5px 0;
     }
 
-    .carousel-caption {
-        display: inline-block !important;
-        font-size: calc($minpixels - 5px);
-    }
-
-    h5 {
-        font-size: $minpixels;
-    }
-
     .parraf p {
         font-size: $minpixels;
         text-align: justify;
     }
-
-
 }
 
 @media only screen and (min-width: 600px) {
 
     .portada {
         padding: 0;
+    }
+
+    .item {
+        border: 2px solid $darkorange;
+        border-radius: 30px;
+        background-size: cover;
+        background-position: center;
+
+        &:hover {
+            transform: scale(1.05);
+            transition: all 1.2s;
+            border-style: dashed;
+        }
     }
 
     main {
@@ -355,11 +378,6 @@ footer {
         text-align: center;
     }
 
-    .carousel-caption {
-        display: inline-block !important;
-        font-size: calc($minpixels + 5px);
-    }
-
     .galerie {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(9, 200px);
@@ -380,7 +398,6 @@ footer {
             background-image: url(../multimedia/imagenes/gif#{$i}.gif);
         }
     }
-
 }
 
 @media only screen and (min-width: 992px) {
@@ -388,6 +405,19 @@ footer {
     main {
         width: calc($maxwidth - 20%);
         height: auto;
+    }
+
+    .item {
+        border: 2px solid $darkorange;
+        border-radius: 30px;
+        background-size: cover;
+        background-position: center;
+
+        &:hover {
+            transform: scale(1.3);
+            transition: all 1.2s;
+            border-style: dashed;
+        }
     }
 
     .galerie {
@@ -434,7 +464,6 @@ footer {
             padding-bottom: 10px;
         }
     }
-
 }
 
 @media only screen and (min-width: 1200px) {
@@ -464,5 +493,4 @@ footer {
             background-image: url(../multimedia/imagenes/gif#{$i}.gif);
         }
     }
-
 }
