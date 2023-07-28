@@ -60,6 +60,7 @@ body {
   margin-right: 10px;
 }
 .navbar-nav li .nav-link {
+  padding: 15px;
   color: aliceblue !important;
 }
 .navbar-nav li .nav-link:hover {
