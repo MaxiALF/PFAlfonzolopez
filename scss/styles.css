@@ -1,11 +1,3 @@
-@font-face {
-  font-family: vampire;
-  src: url(../fonts/Vampire\ Wars.otf);
-}
-@font-face {
-  font-family: greating;
-  src: url(../fonts/Greating.otf);
-}
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +5,7 @@
 }
 
 h1, h2, h3 {
-  background-color: rgb(3, 3, 61);
+  background-color: rgb(2, 5, 92);
   text-align: center;
   font-family: vampire;
   font-size: 45px;
@@ -23,26 +15,28 @@ h1, h2, h3 {
 }
 
 h2, h3 {
-  font-family: greating !important;
+  font-family: arial !important;
   font-style: normal !important;
   font-size: 30px !important;
   padding: 20px !important;
+  width: 100% !important;
 }
 
 h3 {
   margin-top: 20px !important;
   margin-bottom: 10px !important;
-  width: 100% !important;
 }
 
 h4 {
   font-size: 25px;
-  color: rgb(255, 72, 0) !important;
+  color: rgba(255, 72, 0, 0.5) !important;
 }
 
 body {
   background-image: url(../multimedia/imagenes/engranajes.jpg);
   background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .navbar {
@@ -57,11 +51,11 @@ body {
 }
 
 .navbar-nav li {
-  background-color: rgb(134, 134, 134);
-  border: 3px solid rgb(3, 3, 61) !important;
+  background-color: rgba(134, 134, 134, 0.5);
+  border: 3px solid rgb(2, 5, 92) !important;
   border-radius: 10px;
   margin-left: 10px;
-  font-family: greating;
+  font-family: "Times New Roman", Times, serif;
   font-size: 25px;
   margin-right: 10px;
 }
@@ -69,35 +63,26 @@ body {
   color: aliceblue !important;
 }
 .navbar-nav li .nav-link:hover {
-  color: rgb(3, 3, 61) !important;
+  color: rgb(2, 5, 92) !important;
 }
 
 main {
-  background-color: rgba(0, 82, 97, 0.9);
+  background-color: rgba(0, 82, 97, 0.5);
   width: 80%;
   height: auto;
   margin: auto;
-  border: 8px;
-  border-style: double;
-  border-color: rgb(134, 134, 134);
-}
-
-.portada {
-  margin: 10px;
+  border: 12px;
+  max-width: 1500px;
 }
 
 .parraf {
   text-align: justify;
-  font-family: greating;
+  font-family: arial;
   color: lightgoldenrodyellow;
   word-spacing: 15px;
   padding: 50px;
   margin-top: 50px;
   margin-bottom: 50px;
-}
-
-.carousel {
-  background-color: black;
 }
 
 .imagefix {
@@ -106,11 +91,10 @@ main {
 }
 
 .nright {
-  background-color: rgb(134, 134, 134);
+  background-color: rgba(134, 134, 134, 0.5);
 }
 
 .provers {
-  background-color: rgb(134, 134, 134);
   margin: 50px 0 30px 0;
 }
 
@@ -126,15 +110,16 @@ main {
 }
 
 .item {
-  border: 2px solid rgb(255, 72, 0);
+  border: 2px solid transparente;
   border-radius: 30px;
   background-size: cover;
   background-position: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin: 5px;
 }
 .item:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
   transition: all 1.2s;
-  border-style: dashed;
 }
 
 .item1 {
@@ -226,7 +211,7 @@ main {
 }
 
 .contact {
-  background-color: rgb(134, 134, 134);
+  background-color: rgba(134, 134, 134, 0.5);
   width: 100%;
   height: auto;
 }
@@ -240,13 +225,16 @@ main {
 }
 
 .prof {
-  background-color: bisque;
   height: auto;
   width: 95%;
 }
 
+.prof img {
+  max-width: 200px;
+}
+
 .itemV {
-  background-color: rgb(255, 72, 0);
+  background-color: rgba(255, 72, 0, 0.5);
   padding: 20px;
   margin: 50px 0 50px 0;
   width: 100%;
@@ -254,25 +242,28 @@ main {
 }
 
 .card {
-  background-color: rgb(3, 3, 61) !important;
+  background-color: rgb(197, 197, 197) !important;
+  border-radius: 20px;
+  padding: 5px;
 }
-.card .card-body {
-  background-color: rgb(134, 134, 134);
-}
-.card .card-body p {
+.card p {
   font-size: 30px !important;
   color: goldenrod !important;
 }
 
 footer {
-  background-color: rgb(134, 134, 134);
+  background-color: rgba(134, 134, 134, 0.5);
   width: 100%;
   height: auto;
   display: inline-block;
 }
 
+.enlaces {
+  margin: auto;
+  width: 80%;
+}
 .enlaces ul {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: verdana;
   padding: 20px 0 0 20px;
   list-style-type: none;
 }
@@ -286,7 +277,7 @@ footer {
 
 .redes {
   text-align: right;
-  color: rgb(3, 3, 61);
+  color: rgb(2, 5, 92);
   font-size: 35px;
   letter-spacing: 20px;
   padding: 0 15px 15px 0;
@@ -297,13 +288,14 @@ footer {
   font-style: italic;
   font-size: 20px;
   padding: 0 0 10px 60px;
+  text-align: center;
 }
 
 .up {
   position: fixed;
-  right: 40px;
-  bottom: 150px;
-  background-color: rgba(0, 82, 97, 0.9);
+  right: 5px;
+  bottom: 30px;
+  background-color: rgba(0, 82, 97, 0.5);
   padding: 10px;
   box-shadow: 0 0 5px white, 0 0 5px white;
   border-radius: 5px;
@@ -312,8 +304,20 @@ footer {
   color: aliceblue;
 }
 
+.filtros i {
+  font-size: 70px;
+  background: #ffffff;
+  border-radius: 100%;
+  padding: 20px;
+  color: rgb(2, 5, 92);
+}
+
+.filtros div {
+  text-align: center;
+}
+
 ::-webkit-scrollbar {
-  background-color: rgb(3, 3, 61);
+  background-color: rgb(2, 5, 92);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -330,23 +334,27 @@ footer {
     display: none;
   }
   .item {
-    border: 2px solid rgb(255, 72, 0);
     border-radius: 30px;
     background-size: cover;
     background-position: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   .item:hover {
     transform: scale(1.05);
     transition: all 1.2s;
-    border-style: dashed;
   }
   .videos {
     display: inline-block;
+    margin-bottom: 50px;
   }
   .parraf {
     padding: 0;
     font-size: 25px;
     text-align: center;
+  }
+  .parraf p {
+    padding: 0% !important;
+    text-align: center !important;
   }
   .contact {
     width: 100%;
@@ -361,28 +369,20 @@ footer {
   .itemV {
     margin: 5px 0 5px 0;
   }
-  .parraf p {
-    font-size: 25px;
-    text-align: justify;
-  }
 }
 @media only screen and (min-width: 600px) {
-  .portada {
-    padding: 0;
-  }
   .item {
-    border: 2px solid rgb(255, 72, 0);
     border-radius: 30px;
     background-size: cover;
     background-position: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
   .item:hover {
     transform: scale(1.05);
     transition: all 1.2s;
-    border-style: dashed;
   }
   main {
-    background-color: rgba(0, 82, 97, 0.9);
+    background-color: rgba(0, 82, 97, 0.5);
     width: 100%;
     height: auto;
   }
@@ -391,7 +391,7 @@ footer {
     width: 100%;
     height: auto;
     margin: 50px 0 50px 0;
-    background-color: rgb(134, 134, 134);
+    background-color: rgba(134, 134, 134, 0.5);
   }
   .parraf {
     padding: 0;
@@ -462,19 +462,19 @@ footer {
 }
 @media only screen and (min-width: 992px) {
   main {
-    width: 80%;
     height: auto;
   }
   .item {
-    border: 2px solid rgb(255, 72, 0);
+    border: 2px solid transparente;
     border-radius: 30px;
     background-size: cover;
     background-position: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 6px;
   }
   .item:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     transition: all 1.2s;
-    border-style: dashed;
   }
   .galerie {
     width: 100%;
@@ -538,6 +538,9 @@ footer {
   .item18 {
     background-image: url(../multimedia/imagenes/gif18.gif);
   }
+  .parraf p {
+    text-align: justify !important;
+  }
   .parraf p img {
     width: 30%;
   }
@@ -558,10 +561,9 @@ footer {
 @media only screen and (min-width: 1200px) {
   h2, h3 {
     text-align: center;
-    font-family: greating;
     font-size: 30px;
     color: aliceblue;
-    background-color: rgb(3, 3, 61);
+    background-color: rgb(2, 5, 92);
     width: 30%;
     height: 80px;
     margin-top: 100px;

@@ -1,22 +1,14 @@
-@font-face {
-    font-family: vampire;
-    src: url(../fonts/Vampire\ Wars.otf);
-}
-
-@font-face {
-    font-family: greating;
-    src: url(../fonts/Greating.otf);
-}
-
 // colors
-$bluemidnight: rgb(3, 3, 61);
-$darktrasparent: rgba(0, 82, 97, 0.9);
-$greydark: rgb(134, 134, 134);
-$darkorange: rgb(255, 72, 0);
+$bluemidnight: rgb(2, 5, 92);
+$darktrasparent: rgba(0, 82, 97, 0.5);
+$greydark: rgba(134, 134, 134, 0.5);
+$darkorange: rgba(255, 72, 0, 0.5);
+$lightgrey: rgb(197, 197, 197);
 
 // fonts
+$times: 'Times New Roman', Times, serif;
 $mayusc: vampire;
-$cursive: greating;
+$arial: arial;
 $minuscule: monospace;
 $normal: verdana;
 
@@ -46,17 +38,17 @@ h1 {
 
 h2 {
     @extend h1;
-    font-family: $cursive !important;
+    font-family: $arial !important;
     font-style: normal !important;
     font-size: calc($minpixels + 5px) !important;
     padding: 20px !important;
+    width: $maxwidth !important;
 }
 
 h3 {
     @extend h2;
     margin-top: 20px !important;
     margin-bottom: 10px !important;
-    width: $maxwidth !important;
 }
 
 h4 {
@@ -67,6 +59,8 @@ h4 {
 body {
     background-image: url(../multimedia/imagenes/engranajes.jpg);
     background-size: contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .navbar {
@@ -88,7 +82,7 @@ body {
         border: 3px solid $bluemidnight !important;
         border-radius: 10px;
         margin-left: 10px;
-        font-family: greating;
+        font-family: $times;
         font-size: $minpixels;
         margin-right: 10px;
 
@@ -107,27 +101,18 @@ main {
     width: calc($maxwidth - 20%);
     height: auto;
     margin: auto;
-    border: 8px;
-    border-style: double;
-    border-color: $greydark;
-}
-
-.portada {
-    margin: 10px;
+    border: 12px;
+    max-width: 1500px;
 }
 
 .parraf {
     text-align: justify;
-    font-family: $cursive;
+    font-family: $arial;
     color: lightgoldenrodyellow;
     word-spacing: 15px;
     padding: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
-}
-
-.carousel {
-    background-color: black;
 }
 
 .imagefix {
@@ -139,7 +124,6 @@ main {
 }
 
 .provers {
-    background-color: $greydark;
     margin: 50px 0 30px 0;
 }
 
@@ -155,15 +139,16 @@ main {
 }
 
 .item {
-    border: 2px solid $darkorange;
+    border: 2px solid transparente;
     border-radius: 30px;
     background-size: cover;
     background-position: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin: 5px;
 
     &:hover {
-        transform: scale(1.5);
+        transform: scale(1.1);
         transition: all 1.2s;
-        border-style: dashed;
     }
 }
 
@@ -195,9 +180,12 @@ main {
 }
 
 .prof {
-    background-color: bisque;
     height: auto;
     width: calc($maxwidth - 5%);
+}
+
+.prof img{
+    max-width: 200px;
 }
 
 .itemV {
@@ -209,16 +197,13 @@ main {
 }
 
 .card {
-    background-color: $bluemidnight !important;
-
-    .card-body {
-        background-color: $greydark;
-
+    background-color: $lightgrey !important;
+    border-radius: 20px;
+    padding: 5px;
         p {
             font-size: calc($minpixels + 5px) !important;
             color: goldenrod !important;
         }
-    }
 }
 
 footer {
@@ -229,8 +214,10 @@ footer {
 }
 
 .enlaces {
+    margin: auto;
+    width: 80%;
     ul {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: $normal;
         padding: 20px 0 0 20px;
         list-style-type: none;
 
@@ -258,12 +245,13 @@ footer {
     font-style: italic;
     font-size: calc($minpixels - 5px);
     padding: 0 0 10px 60px;
+    text-align: center;
 }
 
 .up {
     position: fixed;
-    right: 40px;
-    bottom: 150px;
+    right: 5px;
+    bottom: 30px;
     background-color: $darktrasparent;
     padding: 10px;
     box-shadow: 0 0 5px white, 0 0 5px white;
@@ -274,6 +262,16 @@ footer {
     }
 }
 
+.filtros i{
+    font-size: 70px;
+    background: #ffffff;
+    border-radius: 100%;
+    padding: 20px;
+    color: $bluemidnight;
+}
+.filtros div{
+    text-align: center;
+}
 ::-webkit-scrollbar {
     background-color: $bluemidnight;
 }
@@ -295,26 +293,30 @@ footer {
     }
 
     .item {
-        border: 2px solid $darkorange;
         border-radius: 30px;
         background-size: cover;
         background-position: center;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
         &:hover {
             transform: scale(1.05);
             transition: all 1.2s;
-            border-style: dashed;
         }
     }
 
     .videos {
         display: inline-block;
+        margin-bottom: 50px;
     }
 
     .parraf {
         padding: 0;
         font-size: $minpixels;
         text-align: center;
+        p{
+            padding: 0% !important;
+            text-align: center !important;
+        }
     }
 
     .contact {
@@ -332,29 +334,19 @@ footer {
     .itemV {
         margin: 5px 0 5px 0;
     }
-
-    .parraf p {
-        font-size: $minpixels;
-        text-align: justify;
-    }
 }
 
 @media only screen and (min-width: 600px) {
 
-    .portada {
-        padding: 0;
-    }
-
     .item {
-        border: 2px solid $darkorange;
         border-radius: 30px;
         background-size: cover;
         background-position: center;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
         &:hover {
             transform: scale(1.05);
             transition: all 1.2s;
-            border-style: dashed;
         }
     }
 
@@ -403,20 +395,20 @@ footer {
 @media only screen and (min-width: 992px) {
 
     main {
-        width: calc($maxwidth - 20%);
         height: auto;
     }
 
     .item {
-        border: 2px solid $darkorange;
+        border: 2px solid transparente;
         border-radius: 30px;
         background-size: cover;
         background-position: center;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        margin: 6px;
 
         &:hover {
-            transform: scale(1.3);
+            transform: scale(1.1);
             transition: all 1.2s;
-            border-style: dashed;
         }
     }
 
@@ -444,6 +436,7 @@ footer {
 
     .parraf {
         p {
+            text-align: justify !important;
             img {
                 width: calc($minwidth + 5%);
             }
@@ -470,7 +463,6 @@ footer {
 
     h2 {
         text-align: center;
-        font-family: greating;
         font-size: calc($minpixels + 5px);
         color: aliceblue;
         background-color: $bluemidnight;
